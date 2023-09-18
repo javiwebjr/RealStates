@@ -1,0 +1,15 @@
+extends ../layout/index
+
+block contenido
+    div(class="py-10")
+        h1(class="text-4xl my-10 font-extrabold text-center") Bienes
+            span(class="font-normal") Raices
+        h2(class="text-center text-2xl  font-extrabold")= pagina
+    
+    div(class="bg-white shadow py-8 px-4 rounded-lg max-w-md mx-auto")
+
+        p(class= error ? 'bg-red-500' : "bg-green-500").py-2.px-5.rounded.lg.w-full.font-bold.text-center.text-white.uppercase= mensaje
+
+
+        if !error
+            a(href="/auth/login" class="text-center font-bold  text-sm text-slate-600 uppercase mt-10 block") Ya puedes Iniciar Sesion 

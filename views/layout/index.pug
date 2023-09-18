@@ -1,0 +1,13 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Bienes Raices | #{pagina}
+        link(rel="stylesheet", href="/css/app.css")
+        block styles
+    body(class="min-h-screen bg-gray-50")
+        main(class="mx-auto container mt-10 px-2")
+            block contenido
+
+        block scripts
