@@ -5,10 +5,14 @@ import { generarJWT, generarID } from "../helpers/token.js";
 import {emailRegistro, emailOlvidePassword} from '../helpers/emails.js';
 
 const formularioLogin = (req, res) => {
+    if (req.cookies._token) {
+        return res.redirect('/mis-propiedades');
+    }
     res.render('auth/login', {
         pagina: 'Iniciar Sesion',
         csrfToken: req.csrfToken()
     })
+    
 }
 
 const autenticar = async (req, res) => {

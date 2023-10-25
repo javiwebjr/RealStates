@@ -33,7 +33,9 @@ const inicio = async (req, res) => {
                 ['publicado', 'DESC']
             ]
         }),
-    ])
+    ]);
+
+    const _token = req.cookies._token;
 
     res.render('inicio', {
         pagina: 'Inicio',
@@ -41,7 +43,8 @@ const inicio = async (req, res) => {
         precios,
         casas,
         departamentos,
-        csrfToken: req.csrfToken()
+        csrfToken: req.csrfToken(),
+        _token
     })
 }
 const categoria = async (req, res) => {

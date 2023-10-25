@@ -12,6 +12,7 @@ block contenido
 
         div(class="mt-8 mx-auto max-w-md")
             div(class="bg-white py-8 px-4 shadow")
+                
                 form(class="space-y-4" method="POST" action="/auth/login")
                     input(type="hidden" name="_csrf" value= csrfToken)
                     div
@@ -19,9 +20,9 @@ block contenido
                         input(type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400" placeholder="example@example.com" name="email")
                     div
                         label(class="block text-sm uppercase text-gray-500 mb-2 font-bold" for="password") Password
-                        input(type="password" id="password" class="w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400" placeholder="Escribe tu password" name="password")
+                        input(type="password" id="password" class="w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400" placeholder="Escribe tu password" name="password" autoComplete="off")
                     
                     div(class="flex items-center justify-between")
                         a(href="/auth/registro" class="text-gray-500 text-xs") ¿No tienes cuenta? Crear Una Cuenta 
                         a(href="/auth/olvide-password" class="text-gray-500 text-xs") Olvide mi password 
-                    input(type="submit" value="Inicia Sesion" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 cursor-pointer")
+                    input(type="submit" value="Inicia Sesion" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 cursor-pointer")

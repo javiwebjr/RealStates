@@ -61,8 +61,8 @@
                 <h1 class="text-xl font-extrabold uppercase my-5">${propiedad?.titulo}</h1>
                 <img src="/uploads/${propiedad?.imagen}" atl="imagen de la propiedad ${propiedad.titulo}">
                 <p class="text-gray-600 font-bold">${propiedad.precio.nombre}</p>
-                <p class="text-indigo-600 font-bold">${propiedad.categoria.nombre}</p>
-                <a href="/propiedad/${propiedad.id}" class="bg-indigo-600 block p-2 text-center font-bold uppercase">Ver propiedad</a>
+                <p class="text-teal-600 font-bold">${propiedad.categoria.nombre}</p>
+                <a href="/propiedad/${propiedad.id}" class="bg-teal-600 block p-2 text-center font-bold uppercase">Ver propiedad</a>
             `)
 
             markers.addLayer(marker);

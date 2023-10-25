@@ -7,7 +7,7 @@ block contenido
     div(class="py-10")
         h2(class="text-center text-2xl  font-extrabold")= pagina
 
-        a(href="/propiedades/crear" class="rounded py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-sm font-bold text-center text-white uppercase my-5 inline-block w-full sm:w-auto") Publicar Propiedad 
+        a(href="/propiedades/crear" class="rounded py-2 px-10 bg-teal-600 hover:bg-teal-700 text-sm font-bold text-center text-white uppercase my-5 inline-block w-full sm:w-auto") Publicar Propiedad 
 
         //- pre= JSON.stringify(propiedades, undefined, 2)
 
@@ -20,7 +20,7 @@ block contenido
                                 div(class="sm:w-1/4 md:w-1/6")
                                     img(src=`uploads/${propiedad.imagen}`, alt=`Imagen propiedad ${propiedad.titulo}` class="w-full block")
                                 div(class="sm:w-2/4 md:w-3/6 lg:w-4/6 space-y-2")
-                                    a(class="block text-2xl font-extrabold text-indigo-600 truncate" href=`/propiedad/${propiedad.id}`)= propiedad.titulo
+                                    a(class="block text-2xl font-extrabold text-teal-600 truncate" href=`/propiedad/${propiedad.id}`)= propiedad.titulo
 
                                     p(class="text-sm text-black font-bold")= propiedad.categoria.nombre
                                     p(class="text-sm text-green-500 font-bold flex items-center")
@@ -37,7 +37,7 @@ block contenido
                                     
                                     button(type="button" data-propiedad-id=`${propiedad.id}` class=`cambiar-estado w-full px-2 py-2 md:py-1 text-xs leading-5 font-semibold rounded-xl cursor-pointer ${propiedad.publicado ?  'bg-green-100 text-green-600' : 'bg-gray-100 text-gray-700'}`)= `${propiedad.publicado ?  'Publicado' : 'No publicado'}`
                                     
-                                    a(href=`/propiedades/editar/${propiedad.id}` class="text-center px-2 py-2 md:py-1 text-xs leading-5 font-semibold rounded-xl cursor-pointer bg-indigo-100 text-indigo-700") Editar
+                                    a(href=`/propiedades/editar/${propiedad.id}` class="text-center px-2 py-2 md:py-1 text-xs leading-5 font-semibold rounded-xl cursor-pointer bg-teal-100 text-teal-700") Editar
                                     
                                     form(method="POST" action=`/propiedades/eliminar/${propiedad.id}`) 
                                         input(type="hidden" name="_csrf" value=csrfToken)
@@ -57,7 +57,7 @@ block contenido
                         nav(class="relative z-0 inline-flex rounded-md shadow-md")
                             - var n = 1;
                                 while n <= paginas
-                                    a(href=`/mis-propiedades?pagina=${n}` class=`${paginaActual == n ? 'bg-indigo-50 border-indigo-500 text-indigo-600' : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-200' } relative inline-flex items-center px-4 py-2 border text-sm font-medium`) #{n++}
+                                    a(href=`/mis-propiedades?pagina=${n}` class=`${paginaActual == n ? 'bg-teal-50 border-teal-500 text-teal-600' : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-200' } relative inline-flex items-center px-4 py-2 border text-sm font-medium`) #{n++}
         else
             p.text-center No hay propiedades en venta
 block scripts 
